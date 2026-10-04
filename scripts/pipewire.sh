@@ -1,0 +1,5 @@
+#!/bin/bash
+pipewire > /dev/null 2>&1  &
+pipewire-pulse  > /dev/null 2>&1  &
+wireplumber > /dev/null 2>&1  &
+
