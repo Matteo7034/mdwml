@@ -41,9 +41,10 @@ while true; do
     LINUX="Linux: $(uname -r)"
     MEM="$(free -h | awk '/^Mem:/ {print $3}')"
     DATE="$(date '+%H:%M | %a | %d/%m/%y')"
-    WIFI="$(ip a | grep "/24" | awk '{print $2}')"
+    WIFI="$(ip a | grep -i  "inet " | grep -i dynamic | awk '{print$2}')"
+
     # Output su xsetroot
     xsetroot -name " $LINUX | Ip: $WIFI | MEM: $MEM | $BAT_INFO | $DATE "
 
-    sleep 10
+    sleep 30
 done
