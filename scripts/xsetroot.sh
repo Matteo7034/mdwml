@@ -38,13 +38,12 @@ while true; do
     fi
 
     # Sistema, Memoria e Data
-    LINUX="Linux: $(uname -r)"
     MEM="$(free -h | awk '/^Mem:/ {print $3}')"
     DATE="$(date '+%H:%M | %a | %d/%m/%y')"
-    WIFI="$(ip a | grep -i  "inet " | grep -i dynamic | awk '{print$2}')"
+    WIFI="$(ip a | grep -i  "inet " | grep -i dynamic | awk '{print$2}'| head -1)"
 
     # Output su xsetroot
-    xsetroot -name " $LINUX | Ip: $WIFI | MEM: $MEM | $BAT_INFO | $DATE "
+    xsetroot -name " Ip: $WIFI | MEM: $MEM | $BAT_INFO | $DATE "
 
     sleep 30
 done
