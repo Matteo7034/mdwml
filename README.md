@@ -10,7 +10,7 @@ In order to build dwm you need the Xlib header files.
 - xorg
 - Jetbrains Nerd Font "see mst"
 - st (mst [Vai alla sezione Installazione](https://github.com/Matteo7034/mst) ) 
-- librewolf
+- Firefox
 - dmenu
 - picom
 - pipewire (systemd debian)

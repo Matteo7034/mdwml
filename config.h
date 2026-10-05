@@ -79,7 +79,7 @@ static const char *dmenucmd[] = {
 };
 
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[] = { "librewolf",NULL};
+static const char *browser[] = { "firefox",NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
