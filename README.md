@@ -1,5 +1,5 @@
 ## Preview
-![Screen](assets/screen6.png)
+![Screen](assets/screen7.png)
 
 
 Requirements

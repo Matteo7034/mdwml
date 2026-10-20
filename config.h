@@ -78,7 +78,7 @@ static const char *dmenucmd[] = {
     NULL 
 };
 
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "st","-e","fish", NULL };
 static const char *browser[] = { "firefox",NULL};
 
 static const Key keys[] = {
