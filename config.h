@@ -13,7 +13,7 @@ static const char col_bg[]          = "#1a1b26"; /* Sfondo principale bar / fine
 static const char col_dark_bg[]     = "#16161e"; /* Sfondo scuro per contrasto */
 static const char col_border_norm[] = "#24283b"; /* Bordo finestre non focalizzate */
 static const char col_fg_norm[]     = "#c0caf5"; /* Testo/tag inattivi */
-static const char col_accent[]      = "#7aa2f7"; /* Colore principale attivo (Blu/Azzurro) */
+static const char col_accent[]      = "#b046eb"; /* Colore principale attivo (Blu/Azzurro) */
 static const char col_fg_sel[]      = "#15161e"; /* Testo sul tag selezionato */
 
 static const char *colors[][3]      = {
@@ -90,7 +90,7 @@ static const Key keys[] = {
     { 0, XF86XK_AudioMute,          spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
 
 	{ MODKEY,			XK_Print,   spawn,	   SHCMD("~/mdwml/scripts/scrot.sh") },
-	{ MODKEY,			XK_l,   spawn,	   {.v = slock }},
+	{ MODKEY|ShiftMask,			XK_l,   spawn,	   {.v = slock }},
 	{ MODKEY|ShiftMask,		XK_b,	   spawn,	   {.v = browser } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
