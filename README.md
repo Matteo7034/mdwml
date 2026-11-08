@@ -16,6 +16,7 @@ In order to build dwm you need the Xlib header files.
 - pipewire (systemd debian)
 - slock 
 - xss-lock
+- thunar
 
 Installation
 ------------

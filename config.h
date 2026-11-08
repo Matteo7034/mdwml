@@ -66,6 +66,7 @@ static const Layout layouts[] = {
 static const char *brightness_up[]   = { "brightnessctl", "set", "+3%", NULL };
 static const char *brightness_down[] = { "brightnessctl", "set", "3%-", NULL };
 static const char *slock[] = {"slock",NULL};
+static const char *filemanager[] = {"thunar",NULL};
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { 
     "dmenu_run", 
@@ -90,7 +91,8 @@ static const Key keys[] = {
     { 0, XF86XK_AudioMute,          spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
 
 	{ MODKEY,			XK_Print,   spawn,	   SHCMD("~/mdwml/scripts/scrot.sh") },
-	{ MODKEY|ShiftMask,			XK_l,   spawn,	   {.v = slock }},
+	{ MODKEY,			XK_e,      spawn,          {.v = filemanager }},
+	{ MODKEY|ShiftMask,		XK_l,      spawn,	   {.v = slock }},
 	{ MODKEY|ShiftMask,		XK_b,	   spawn,	   {.v = browser } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
