@@ -1,6 +1,8 @@
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+export DISPLAY=:0
+export XDG_SESSION_TYPE=x11
 xrandr --output  eDP-1 --mode 1600x900
 
 ~/mdwml/scripts/xsetroot.sh &
@@ -14,10 +16,14 @@ pipewire-pulse > /dev/null 2>&1 &
 wireplumber > /dev/null 2>&1 & 
 
 # compositor e sfondo 
-feh --bg-fill ~/mdwml/wall/purple.png &
+#feh --bg-fill ~/mdwml/wall/purple.png &
 picom &
 redshift -O 3600 &
 
+
+sleep 1 
+
+wal -i ~/mdwml/wall/purple.png
 # Setta il timeout di inattività di X11 a 300 secondi (5 minuti)
 xset s 300 300
 xset dpms 300 300 300
@@ -25,3 +31,5 @@ xset dpms 300 300 300
 # Avvia xss-lock in background accoppiato con il tuo locker preferito
 xss-lock -- slock &
 exec dbus-run-session -- dwm
+
+
