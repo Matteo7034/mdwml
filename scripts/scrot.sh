@@ -5,7 +5,7 @@ TARGET_DIR="$HOME/Pictures/Screenshots"
 mkdir -p "$TARGET_DIR"
 
 # Nome del file con data e ora
-FILE_NAME="screenshot_$(date +'%Y%m%d_%H%M%S').png"
+FILE_NAME="screenshot_$(date +'%Y:%m:%d_%H:%M:%S').png"
 FULL_PATH="$TARGET_DIR/$FILE_NAME"
 
 # Notifica inizio selezione
