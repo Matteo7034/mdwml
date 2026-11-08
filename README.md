@@ -17,10 +17,16 @@ In order to build dwm you need the Xlib header files.
 - slock 
 - xss-lock
 - thunar
+- python3 
+- linuxwallpaper-engine (see official repo on github: [wallpaperengine](https://github.com/Almamu/linux-wallpaperengine))
 
 Installation
 ------------
 ```bash
+cd ~/
+python3 -m venv venv
+source ~/venv/bin/activate
+pip install -r ~/mdwml/wallpaperpicker/requirements.txt --break-system-packages
 cp ~/mdwml/scripts/.xinitrc ~/
 cd ~/mdwml
 sudo make clean install

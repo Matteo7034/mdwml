@@ -91,6 +91,7 @@ static const Key keys[] = {
     { 0, XF86XK_AudioMute,          spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
 
 	{ MODKEY,			XK_Print,   spawn,	   SHCMD("~/mdwml/scripts/scrot.sh") },
+	{ MODKEY|ShiftMask,  		XK_w,	   spawn,	   SHCMD("~/mdwml/scripts/wall.sh") },
 	{ MODKEY,			XK_e,      spawn,          {.v = filemanager }},
 	{ MODKEY|ShiftMask,		XK_l,      spawn,	   {.v = slock }},
 	{ MODKEY|ShiftMask,		XK_b,	   spawn,	   {.v = browser } },
